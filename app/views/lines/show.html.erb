@@ -1,0 +1,30 @@
+<% content_for(:title, " #{@line.color} | Bus System") %>
+
+<div class = "row">
+   <div class = "col-lg-12">
+    <h4><%= @line.color %></h4>
+   </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+      <%= link_to "Edit", edit_line_path(@line), :class => 'btn btn-sm btn-warning' %>
+    </div>
+
+    <br>
+    <div class="row">
+    <div class="col-lg-4">
+      <%= link_to "Add Station", {:controller => "stops", :action => "new", :line_id => @line.id}, :class => 'btn btn-sm btn-warning' %>
+    </div>
+    <br>
+    <div class="col-lg-4">
+      <%= link_to "Delete", line_path(@line),
+                            :confirm => "Are You Sure?",
+                            :method => :delete,
+                            :class => "btn btn-sm btn-danger" %>
+    </div>
+    <br>
+
+
+</div>
+

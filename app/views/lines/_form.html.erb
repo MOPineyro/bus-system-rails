@@ -1,0 +1,7 @@
+<%= form_for(@line, :html => {:class => "form-inline"}) do |f| %>
+  <div class="form-group">
+    <%= f.label :color %>
+    <%= f.text_field :color, :class => "form-control" %>
+  </div>
+  <%= f.submit(:class => 'btn btn-success') %>
+<% end %>

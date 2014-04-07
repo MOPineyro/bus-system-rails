@@ -1,0 +1,24 @@
+<% content_for(:title, " #{@station.name} | Bus System") %>
+
+<div class = "row">
+   <div class = "col-lg-12">
+    <h4><%= @station.name %></h4>
+   </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+      <%= link_to "Edit", edit_station_path(@station), :class => 'btn btn-sm btn-warning' %>
+    </div>
+    <br>
+    <div class="col-lg-4">
+      <%= link_to "Delete", station_path(@station),
+                            :confirm => "Are You Sure?",
+                            :method => :delete,
+                            :class => "btn btn-sm btn-danger" %>
+    </div>
+</div>
+
+<!-- -->
+
+

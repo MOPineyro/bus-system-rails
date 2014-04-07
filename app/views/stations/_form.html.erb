@@ -1,0 +1,11 @@
+<%= form_for(@station, :html => {:class => "form-inline"}) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, :class => "form-control" %>
+  </div>
+  <%= f.submit(:class => 'btn btn-success') %>
+<% end %>
